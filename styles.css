@@ -1,11 +1,241 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+.monoton-regular {
+  font-family: "Monoton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-body {
-  background: rgb(163, 163, 163);
+.inter-regular {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 200vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+#loading-screen {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+/* Loading Text */
+#loading-text {
+  font-size: 4rem;
+  font-family: "Monoton", sans-serif;
+  font-weight: 400;
+  word-spacing: 1rem;
+  color: rgb(207, 151, 29);
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 3rem #cf971d;
+}
+
+/* Scroll Prompt */
+#scroll-prompt {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgb(207, 151, 29);
+  font-size: 1.75rem;
+  z-index: 10;
+  opacity: 0;
+  animation: fadeInScrollPrompt 1s ease 0.5s forwards;
+  pointer-events: none;
+  font-family: "Monoton", sans-serif;
+  font-weight: 400;
+  text-shadow: 0 0 1.5rem #cf971d;
+  word-spacing: 0.25rem;
+}
+
+@keyframes fadeInScrollPrompt {
+  to {
+    opacity: 1;
+  }
+}
+
+#canvas-container {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+#fade-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgb(255, 255, 255);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+#portfolio {
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  width: 100vw;
+  background: rgb(255, 255, 255);
+  display: none;
+  z-index: 3;
+  font-family: sans-serif;
+}
+
+#portfolio.visible {
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  background-color: #ffffff;
+  color: rgb(255, 255, 255);
+  border-color: #948f8f;
+  border-style: solid;
+  border-width: 1px;
+  height: 100%;
+  padding-top: 2rem;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.sidebar a {
+  color: rgb(68, 67, 67);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: #00d1ff;
+}
+
+/* Portfolio content */
+.portfolio-content {
+  flex: 1;
+  padding: 3rem 4rem;
+  max-width: calc(100vw - 200px);
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.about h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.about p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Section separator */
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 3rem 0;
+}
+
+/* Projects */
+.projects h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.project-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.project-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Responsive: 3 cards per row, shrink to 2 or 1 on small screens */
+@media (max-width: 1024px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  #portfolio {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .portfolio-content {
+    max-width: 100%;
+    padding: 2rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 }
