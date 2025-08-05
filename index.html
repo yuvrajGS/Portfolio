@@ -6,7 +6,7 @@
         <title>YuvrajGS Portfolio</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Monoton&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Monoton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
@@ -20,47 +20,236 @@
         <div id="canvas-container"></div>
         <div id="fade-overlay"></div>
         <div id="portfolio">
-            <!-- Sidebar -->
-            <nav class="sidebar">
-                <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="https://your-contact-form-link.com" target="_blank">Contact</a></li>
-                </ul>
-            </nav>
+            <!-- Animated Stars Background -->
+            <div class="stars" id="stars"></div>
 
-            <!-- Main Content -->
-            <div class="portfolio-content">
-                <section id="about" class="about">
-                <h1>Hello, I'm Yuvraj </h1>
-                <p>kdjfhgkdghdfg dfskjghdfkjg dfkjghdfkjgdkjfgkdfg</p>
-                </section>
-
-                <hr>
-
-                <section id="projects" class="projects">
-                    <h2>Projects</h2>
-                    <div class="project-grid">
-                        <div class="project-card" onclick="window.location.href='https://link-to-project-1.com'">
-                        <img src="images/project1.jpg" alt="Project 1 Screenshot">
-                        <h3>temp1</h3>
-                        <p>awdadadwd</p>
-                        </div>
-                        <div class="project-card" onclick="window.location.href='https://link-to-project-2.com'">
-                        <img src="images/project2.jpg" alt="Project 2 Screenshot">
-                        <h3>temp2</h3>
-                        <p>awdawdawd</p>
-                        </div>
-                        <div class="project-card" onclick="window.location.href='https://link-to-project-3.com'">
-                        <img src="images/project3.jpg" alt="Project 3 Screenshot">
-                        <h3>temp3</h3>
-                        <p>awdawdawd</p>
-                        </div>
-                        <!-- Add more cards as needed -->
+            <div class="container">
+                <!-- Left Navigation -->
+                <nav class="nav-section">
+                    <div class="profile-section">
+                        <h1 class="name">Yuvraj Singh</h1>
+                        <p class="title">Full-Stack Software Engineer</p>
+                        <p class="tagline">Crafting efficient, scalable, and intelligent software.</p>
                     </div>
-                </section>
+                    
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link active">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#experience" class="nav-link">Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#projects" class="nav-link">Projects</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link" onclick="window.open('https://github.com/YuvrajGS', '_blank')">Github</a>
+                        <a href="#" class="social-link" onclick="window.open('https://www.linkedin.com/in/yuvrajGS/', '_blank')">LinkedIn</a>
+                        <a href="#" class="social-link" onclick="window.open('mailto:yuvraj.g.singh1@gmail.com')">Gmail</a>
+                    </div>
+                </nav>
+
+                <!-- Main Content -->
+                <main class="content-section">
+                    <section id="about" class="section">
+                        <h2 class="section-title">About Me</h2>
+                        <p class="about-text">
+                            I am a recent graduate from Wilfrid Laurier University <span class="highlight">(GPA: 3.72/4.0)</span> with a passion for building clean, efficient systems that solve real problems. 
+                            I enjoy diving into the “why” behind technical decisions just as much as the code itself—whether it's optimizing backend logic, designing scalable data models, or understanding how users actually interact with a feature.
+                            My technical strengths lie in <span class="highlight">full-stack development and machine learning</span>, but what really drives me is seeing how well-structured code can lead to reliable, maintainable software at scale. 
+                            I have worked with everything from <span class="highlight">C++</span> and <span class="highlight">OpenGL</span> to <span class="highlight">Python</span>, <span class="highlight">Java</span>, <span class="highlight">C#</span>, and <span class="highlight">Angular</span>, and I am always looking for new ways to push what I can build and understand.
+                        </p>
+                    </section>
+
+                    <section id="experience" class="section">
+                        <h2 class="section-title">Experience</h2>
+                        
+                        <div class="experience-item">
+                            <div class="force-lightning"></div>
+                            <div class="holocron-glow"></div>
+                            <div class="experience-header">
+                                <div>
+                                    <h3 class="job-title">Software Developer Intern</h3>
+                                    <p class="company">SOTI</p>
+                                </div>
+                                <span class="duration">Sept 2023 - Aug 2024</span>
+                            </div>
+                            <p class="job-description">
+                                Collaborated with cross-functional teams (Android, iOS, Database and Architecture) to design and implement 
+                                scalable status management logic for the App Dashboard feature in <span class="highlight">SOTI MobiControl</span>, improving mobile app management 
+                                efficiency by centralizing critical metrics for <span class="highlight">17,000+</span> enterprise users.
+                            </p>
+                            <p class="job-description">
+                                Automated local BDD environment setup via scripting, reducing configuration time by <span class="highlight">92%</span> (1 hour to 5 minutes) 
+                                per developer, improving pre-merge automation test and <span class="highlight">CI/CD (Jenkins)</span> workflow.
+                            </p>
+                            <p class="job-description">
+                                Delivered full-stack features in an <span class="highlight">Agile</span> environment, implemented C# service and data-access layers, designed database schemas, 
+                                built Angular UI components, wrote comprehensive unit and integration tests to support new feature development, and enhanced legacy code.
+                            </p>
+                            <p class="job-description">
+                                Conducted <span class="highlight">system design</span> and <span class="highlight">data modelling</span> for various features and improvements, including codebase investigations and documentation. 
+                                Designed and implemented new database tables to manage statuses and developed <span class="highlight">complex status management logic</span> to handle diverse scenarios, 
+                                producing UML and ER diagrams to ensure accurate state transitions and maintainable architecture.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">.Net</span>
+                                <span class="tech-tag">Angular</span>
+                                <span class="tech-tag">SQL</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="projects" class="section">
+                        <h2 class="section-title">Featured Projects</h2>
+                        
+                        <div class="projects-grid">
+                            <div class="project-card" onclick="window.open('https://github.com/yuvrajGS/Twitter-Spam-Classification', '_blank')">
+                                <div class="project-image">
+                                    <img src="images/botdet.jpg" alt="Detection Spam Users on X (Twitter)">
+                                </div>
+                                <div class="project-content">
+                                    <div class="force-lightning"></div>
+                                    <div class="holocron-glow"></div>
+                                    <h3 class="project-title">Detection Spam Users on X (Twitter)</h3>
+                                    <p class="project-description">
+                                        Developed a high-accuracy (90%+) machine learning pipeline to classify spam users on X (formerly Twitter) using over 2 million tweets and enriched user profile data.
+                                        Applied advanced NLP techniques (tokenization, stemming, noise filtering) and engineered user-level behavioral features (engagement metrics, normalized word frequency vectors).
+                                    </p>
+                                    <ul class="project-description">
+                                        <li>Trained and evaluated KNN, Random Forest, and Neural Network models using stratified train-test split and 5-fold cross-validation.</li>
+                                        <li>Achieved F1-score ≈ 0.97 with Random Forest; performed hyperparameter tuning with GridSearchCV.</li>
+                                        <li>Built a TensorFlow neural network with dropout layers to mitigate overfitting.</li>
+                                        <li>Implemented efficient preprocessing and feature engineering pipelines using NumPy, Pandas, and custom logic.</li>
+                                    </ul>
+                                    <div class="tech-stack">
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">Scikit-learn</span>
+                                        <span class="tech-tag">Tensorflow</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="images/railroad.png" alt="Railroad Game">
+                                </div>
+                                <div class="project-content">
+                                    <div class="force-lightning"></div>
+                                    <div class="holocron-glow"></div>
+                                    <h3 class="project-title">Railroad Game</h3>
+                                    <p class="project-description">
+                                        Developed a procedural 2D railroad building game, implementing B-spline curve pathfinding for train navigation and Perlin noise-generated terrain with dynamic obstacles (rocks/water) and collision detection.
+                                    </p>
+                                    <div class="tech-stack">
+                                        <span class="tech-tag">C++</span>
+                                        <span class="tech-tag">OpenGL</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="images/object_det.jpg" alt="Object Detection in Images">
+                                </div>
+                                <div class="project-content">
+                                    <div class="force-lightning"></div>
+                                    <div class="holocron-glow"></div>
+                                    <h3 class="project-title">Object Detection in Images</h3>
+                                    <p class="project-description">
+                                        Real-time spacecraft monitoring system with hyperdrive diagnostics and 
+                                        navigation assistance for smuggling operations.
+                                    </p>
+                                    <div class="tech-stack">
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">OpenCV</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="images/housing.png" alt="Full-Stack Housing Market Web App">
+                                </div>
+                                <div class="project-content">
+                                    <div class="force-lightning"></div>
+                                    <div class="holocron-glow"></div>
+                                    <h3 class="project-title">Full-Stack Housing Market Web App</h3>
+                                    <p class="project-description">
+                                        Developed a scalable full-stack real estate web application using ASP.NET Core (C#) and Angular, 
+                                        featuring secure user authentication, RESTful APIs, CRUD operations, and real-time search/filtering; 
+                                        implemented a MySQL database with a modular, clean architecture for maintainability and responsiveness across devices.
+                                    </p>
+                                    <div class="tech-stack">
+                                        <span class="tech-tag">C#</span>
+                                        <span class="tech-tag">ASP.NET Core</span>
+                                        <span class="tech-tag">Angular</span>
+                                        <span class="tech-tag">SQL</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="images/portfolio.png" alt="This Three.js Portfolio Website">
+                                </div>
+                                <div class="project-content">
+                                    <div class="force-lightning"></div>
+                                    <div class="holocron-glow"></div>
+                                    <h3 class="project-title">This Three.js Portfolio Website</h3>
+                                    <p class="project-description">
+                                        Real-time spacecraft monitoring system with hyperdrive diagnostics and 
+                                        navigation assistance for smuggling operations.
+                                    </p>
+                                    <div class="tech-stack">
+                                        <span class="tech-tag">JavaScript</span>
+                                        <span class="tech-tag">WebGL</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-card" onclick="window.open('https://github.com/yuvrajGS/Huffman-Coding', '_blank')">
+
+                                <div class="project-content">
+                                    <div class="force-lightning"></div>
+                                    <div class="holocron-glow"></div>
+                                    <h3 class="project-title">Text Compression Tool with Custom Huffman Encoding</h3>
+                                    <p class="project-description">
+                                        Designed and implemented a text file compressor in C++ using a custom Huffman-like algorithm. Includes custom heap structure, 
+                                        frequency analysis, and bit-level binary output. Achieves efficient compression of alphanumeric and punctuation-rich plain text files.
+                                    </p>
+                                    <div class="tech-stack">
+                                        <span class="tech-tag">C++</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-card">
+                                <div class="project-content">
+                                    <div class="force-lightning"></div>
+                                    <div class="holocron-glow"></div>
+                                    <h3 class="project-title">Shoppers Drug Mart Point of Sales DBMS</h3>
+                                    <p class="project-description">
+                                        Led a team to design and implement a fully normalized Point of Sales DBMS with a functional GUI for 
+                                        Shoppers Drug Mart using SQL, MySQL, and Python, including ER diagrams, complex queries, and compliance with 1NF-BCNF standards to ensure 
+                                        data integrity and efficient backend interaction.
+                                    </p>
+                                    <div class="tech-stack">
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">SQL</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                </main>
             </div>
         </div>
         <script type="module" src="/main.js"></script>
+        <script src="/portfolio.js"></script>
     </body>
 </html>
