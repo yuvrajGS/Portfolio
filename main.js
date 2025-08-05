@@ -32,7 +32,7 @@ function init() {
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.01);
     scene.add(ambientLight);
 
-    loader.load('./models/scene.gltf', function(gltf) {
+    loader.load('/models/scene.gltf', function(gltf) {
         const model = gltf.scene;
         model.scale.set(10, 10, 10);
         model.rotation.y = Math.PI;

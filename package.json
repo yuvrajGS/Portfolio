@@ -8,11 +8,20 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "three": "^0.178.0"
   },
   "devDependencies": {
     "vite": "^7.0.6"
-  }
+  },
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuvrajGS/Portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yuvrajGS/Portfolio/issues"
+  },
+  "homepage": "https://github.com/yuvrajGS/Portfolio#readme",
+  "description": ""
 }
